@@ -1,0 +1,87 @@
+/* Основные цвета темы */
+:root {
+    --metro-dark: #1a1a1a;
+    --metro-darker: #111;
+    --metro-accent: #00a1f1;
+    --metro-accent-light: #6bc9ff;
+    --metro-text: #e6e6e6;
+}
+
+/* Базовые стили */
+.metro-dark {
+    background-color: var(--metro-dark);
+    color: var(--metro-text);
+    min-height: 100vh;
+}
+
+/* Навигационная панель */
+.metro-navbar {
+    background-color: var(--metro-darker) !important;
+    border-bottom: 3px solid var(--metro-accent);
+    box-shadow: 0 2px 10px rgba(0, 161, 241, 0.2);
+}
+
+.metro-brand {
+    color: var(--metro-accent-light) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metro-link {
+    color: var(--metro-text) !important;
+    margin: 0 10px;
+    padding: 8px 15px !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.metro-link:hover {
+    color: var(--metro-accent) !important;
+    background-color: rgba(0, 161, 241, 0.1);
+}
+
+.metro-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--metro-accent);
+    transition: width 0.3s ease;
+}
+
+.metro-link:hover::after {
+    width: 100%;
+}
+
+/* Контейнер контента */
+.metro-container {
+    background-color: var(--metro-darker);
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+
+/* Кнопки (добавим для будущего использования) */
+.metro-btn {
+    border-radius: 0;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.metro-btn-primary {
+    background-color: var(--metro-accent);
+    color: white;
+}
+
+.metro-btn-primary:hover {
+    background-color: var(--metro-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 161, 241, 0.3);
+}
